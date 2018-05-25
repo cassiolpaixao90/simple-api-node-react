@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 //get Ip request
-app.use(requestIp.mw())
+app.use(requestIp.mw());
 
 //configuracao para validacao dos campos
 app.use(expressValidator());

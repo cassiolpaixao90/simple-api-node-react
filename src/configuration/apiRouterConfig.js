@@ -1,9 +1,7 @@
 "use strict";
 
-import indexRouter         from "../routes/index-route";
-import bookRouter          from "../routes/book-route";
+import bookRouter          from "../routes/book-router";
 
 export default function ConfigApiRoutes(app) {
-    app.use("/", indexRouter);
     app.use("/api/book", bookRouter);
 }
