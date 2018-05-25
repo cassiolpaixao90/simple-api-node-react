@@ -1,0 +1,12 @@
+{
+  "name": "simple-api-node-react",
+  "version": "0.0.0",
+  "scripts": {
+    "start": ""
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "morgan": "~1.9.0"
+  }
+}
