@@ -1,14 +1,21 @@
 'use strict';
-import mongoose  from "mongoose";
+import mongoose from "mongoose";
 
-const Schema     = mongoose.Schema;
+// import AuthorSchema from '';
+
+const Schema = mongoose.Schema;
 const BookSchema = new Schema({
-  nome: {
-    type:       String,
-    maxLength:  200,
-    required:   true,
+  titulo: {
+    type: String,
+    maxLength: 200,
+    required: true,
+  },
+  preco: {
+    type: String,
+    required: true
   }
+  // autor: AuthorSchema
 
 });
 
-export {BookSchema as BookSchema};
+export { BookSchema as BookSchema };

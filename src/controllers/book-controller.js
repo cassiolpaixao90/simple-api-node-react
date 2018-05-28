@@ -24,7 +24,7 @@ exports.getById = async (req, res, next) => {
   try {
     const id = req.params.id;
     const ret  = await bookService.getById(id);
-    res.json({countries: ret, status: 200});
+    res.json({books: ret, status: 200});
   } catch (e) {
     res.status(e.status).json({message: e.message, status: e.status});
   }
@@ -33,7 +33,7 @@ exports.getById = async (req, res, next) => {
 exports.getAll = async (req, res, next) => {
   try {
     const ret  = await bookService.getAll();
-    res.json({countries: ret, status: 200});
+    res.json({books: ret, status: 200});
   } catch (e) {
     res.status(e.status).json({message: e.message, status: e.status});
   }
