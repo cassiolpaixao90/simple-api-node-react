@@ -4,6 +4,7 @@ import {bookSchema}  from "../validators/validationSchemas";
 import bookService   from "../services/book-service";
 import AppExeception    from '../exceptions/exception';
 import messageProperties from "../utils/messageProperties";
+import { log } from "util";
 
 exports.register = async (req, res, next) => {
   try {
@@ -13,6 +14,7 @@ exports.register = async (req, res, next) => {
       throw new AppExeception(errors, 500);
     }
     const data = req.body;
+    console.log("data", data);
     await bookService.save(data);
     res.json({message: messageProperties.MESSAGE_SUCCESS, status: 201});
   } catch (e) {

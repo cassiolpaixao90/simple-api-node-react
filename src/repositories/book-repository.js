@@ -1,11 +1,13 @@
 'use strict';
 import AppException        from '../exceptions/exception';
+import { getBookModel } from "../data_access/modelFactory";
 
-exports.create = async (data, Book) => {
+exports.create = async (data) => {
 
   try {
-    const Book = new Book(data);
-    await Book.save();
+    const Book  = await getBookModel();
+    const book = new Book(data);
+    await book.save();
   } catch (error) {
     throw new AppException(error);
   }

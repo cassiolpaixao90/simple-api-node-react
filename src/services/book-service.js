@@ -5,8 +5,8 @@ import messageProperties      from "../utils/messageProperties";
 
 exports.save = async (data) => {
   try {
-    const Book  = await getBookModel();
-    await repository.create(data, Book);
+    // console.log("Book", Book);
+    await repository.create(data);
   }
   catch(e){
     throw new AppExeception(e.message, e.status);
